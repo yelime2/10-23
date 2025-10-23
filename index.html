@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="stylesheet" href="style.css" />
+   
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body class="back">
+    <div class="wrap">
+    <h1>순간 기억력 훈련 WEB</h1>
+    <p>3초 동안 보여지는 사각형의 위치를 기억하고 <br>손가락으로 집어 원래 자리로 옮겨보세요.</p>
+    <div class="controls">
+        <button id="startBtn" class="btn">시작</button>
+        <button id="completeBtn" class="btn">완성</button>
+        <button id="hintBtn" class="btn">Hint</button> 
+        <span id="timer"></span>
+    </div>
+    <div class="stage">
+        <video id="webcam" playsinline autoplay muted></video>
+        <canvas id="gameCanvas" width="640" height="480"></canvas>
+        <canvas id="overlay" width="640" height="480"></canvas>
+    </div>
+    <script src="game.js" defer></script>
+    </div>
+    <div id="memoryHint">
+        손가락과 전두엽, 기억력은 서로 밀접하게 연관되어 있습니다.
+    이 웹사이트는  손끝으로 사용하여 기억을 되살리는 과정을 통해 단기 기억력과 집중력을 향상시키도록 설계되었습니다.
+      </div>
+</body>
+</html>
